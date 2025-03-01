@@ -1,0 +1,8 @@
+{
+	"module":"sdklib_mojo",
+	"about":"important pieces of softwares",
+	"author":"iDkP from GaragePixel",
+	"version":"1.0.0",
+	"support":"http://monkeycoder.co.nz",
+	"depends":["monkey"]
+}

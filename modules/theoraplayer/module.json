@@ -1,8 +1,0 @@
-{
-	"module":"theoraplayer",
-	"about":"Minimal theora player",
-	"author":"Kresimir Spes",
-	"version":"1.0.0",
-	"support":"http://monkeycoder.co.nz",
-	"depends":["openal","libc"]
-}

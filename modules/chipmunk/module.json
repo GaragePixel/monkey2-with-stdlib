@@ -1,6 +1,0 @@
-{
-	"module":"chipmunk",
-	"about":"Chipmunk 2d physics lib wrapper",
-	"version":"1.0.0",
-	"depends":["libc"]
-}
