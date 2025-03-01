@@ -1,7 +1,0 @@
-{
-	"module":"admob",
-	"about":"Admob wrapper",
-	"version":"1.0.06",
-	"depends":["jni","sdl2","mojo"]
-}
-
