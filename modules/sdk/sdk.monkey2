@@ -106,5 +106,5 @@ Namespace sdk
 																	'	zlib
 
 Function Main()
-	Print "sdk version 1.0 - 2025-02-26"
+	Print "sdk version 1.0 - 2025-03-02"
 End
