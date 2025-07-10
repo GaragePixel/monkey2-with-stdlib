@@ -3,6 +3,16 @@ Namespace monkey.types
 
 Extern
 
+#rem
+2025-07-09 Added new numerical hierarchy interfaces
+Author: iDkP from GaragePixel
+Quick Overview:
+	Hierarchy of number representations:
+		INumeric 
+			IIntegral <- ICompact <- IShort
+			IReal 
+#end
+
 #rem monkeydoc Implemented by numeric types.
 #end
 Interface INumeric
@@ -11,6 +21,20 @@ End
 #rem monkeydoc Implemented by integral numeric types.
 #end
 Interface IIntegral Extends INumeric
+End
+
+#rem monkeydoc Implemented by compact integral numeric types (less than signed 32 bits).
+@author iDkP from GaragePixel
+@since 2025-07-09
+#end
+Interface ICompact Extends IIntegral
+End
+
+#rem monkeydoc Implemented by short integral numeric types (less than signed 16 bits).
+@author iDkP from GaragePixel
+@since 2025-07-09
+#end
+Interface IShort Extends ICompact
 End
 
 #rem monkeydoc Implemented by real numeric types.
@@ -24,33 +48,39 @@ Struct @Bool ="bbBool"
 End
 
 #rem monkeydoc Primitive 8 bit byte type.
+@modified by iDkP from GaragePixel (2025-07-09)
 #end
-Struct @Byte Implements IIntegral ="bbByte"
+Struct @Byte Implements IShort ="bbByte"
 End
 
 #rem monkeydoc Primitive 8 bit unsigned byte type.
+@modified by iDkP from GaragePixel (2025-07-09)
 #end
-Struct @UByte Implements IIntegral ="bbUByte"
+Struct @UByte Implements IShort ="bbUByte"
 End
 
 #rem monkeydoc Primitive 16 bit short type.
+@modified by iDkP from GaragePixel (2025-07-09)
 #end
-Struct @Short Implements IIntegral ="bbShort"
+Struct @Short Implements IShort ="bbShort"
 End
 
 #rem monkeydoc Primitive 16 bit unsigned short type.
+@modified by iDkP from GaragePixel (2025-07-09)
 #end
-Struct @UShort Implements IIntegral ="bbUShort"
+Struct @UShort Implements IShort ="bbUShort"
 End
 
 #rem monkeydoc Primitive 32 bit int type.
+@modified by iDkP from GaragePixel (2025-07-09)
 #end
-Struct @Int Implements IIntegral ="bbInt"
+Struct @Int Implements ICompact ="bbInt"
 End
 
 #rem monkeydoc Primitive 32 bit unsigned int type.
+@modified by iDkP from GaragePixel (2025-07-09)
 #end
-Struct @UInt Implements IIntegral ="bbUInt"
+Struct @UInt Implements ICompact ="bbUInt"
 End
 
 #rem monkeydoc Primitive 64 bit long type.
